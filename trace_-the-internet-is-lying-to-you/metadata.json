@@ -1,0 +1,7 @@
+{
+  "name": "TRACE: The Internet Is Lying to You",
+  "description": "A digital media literacy investigation game for the Girls Who Code HHS Hackathon 2026. Investigate viral claims, analyze evidence, calibrate confidence, and expose deceptive content.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Black Theme: High-contrast, clean inky charcoal, zero sci-fi neon */
+.theme-black {
+  background-color: #0F0F11;
+  color: #F4F4F5;
+}
+
+.theme-black .surface-card {
+  background-color: #18181B;
+  border-color: #27272A;
+}
+
+.theme-black .surface-inset {
+  background-color: #09090B;
+  border-color: #27272A;
+}
+
+.theme-black :focus-visible {
+  outline: 2px solid #FFFFFF;
+  outline-offset: 2px;
+}
+
+/* White Theme: Clean, stark editorial newspaper / paper dossier */
+.theme-white {
+  background-color: #F8F9FA;
+  color: #18181B;
+}
+
+.theme-white .surface-card {
+  background-color: #FFFFFF;
+  border-color: #E4E4E7;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+.theme-white .surface-inset {
+  background-color: #F4F4F5;
+  border-color: #E4E4E7;
+}
+
+.theme-white :focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.theme-black ::-webkit-scrollbar-track {
+  background: #0F0F11;
+}
+.theme-black ::-webkit-scrollbar-thumb {
+  background: #27272A;
+  border-radius: 3px;
+}
+.theme-white ::-webkit-scrollbar-track {
+  background: #F8F9FA;
+}
+.theme-white ::-webkit-scrollbar-thumb {
+  background: #D4D4D8;
+  border-radius: 3px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
